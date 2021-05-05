@@ -1,7 +1,7 @@
-I, [2021-04-21T20:15:24.269203 #10332]  INFO -- : Registered expected interaction GET /animals
-D, [2021-04-21T20:15:24.269203 #10332] DEBUG -- : {
+I, [2021-04-28T20:40:46.439760 #14040]  INFO -- : Registered expected interaction GET /animals
+D, [2021-04-28T20:40:46.440760 #14040] DEBUG -- : {
   "description": "a request to get all animals",
-  "providerState": "there are animals",
+  "providerState": "has animals",
   "request": {
     "method": "GET",
     "path": "/animals"
@@ -18,28 +18,16 @@ D, [2021-04-21T20:15:24.269203 #10332] DEBUG -- : {
           "contents": "Bendali"
         },
         "gender": {
-          "json_class": "Pact::Term",
-          "data": {
-            "generate": "Female",
-            "matcher": {
-              "json_class": "Regexp",
-              "o": 0,
-              "s": "Female|Male"
-            }
-          }
+          "json_class": "Pact::SomethingLike",
+          "contents": "Female"
         },
-        "isVaccinated": {
+        "vaccinated": {
           "json_class": "Pact::SomethingLike",
           "contents": true
         },
         "name": {
           "json_class": "Pact::SomethingLike",
           "contents": "Manchas"
-        },
-        "vaccines": {
-          "json_class": "Pact::ArrayLike",
-          "contents": "rabia",
-          "min": 1
         }
       },
       "min": 1
@@ -47,8 +35,8 @@ D, [2021-04-21T20:15:24.269203 #10332] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-04-21T20:15:24.301168 #10332]  INFO -- : Received request GET /animals
-D, [2021-04-21T20:15:24.301168 #10332] DEBUG -- : {
+I, [2021-04-28T20:40:46.472286 #14040]  INFO -- : Received request GET /animals
+D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
   "path": "/animals",
   "query": "",
   "method": "get",
@@ -64,8 +52,8 @@ D, [2021-04-21T20:15:24.301168 #10332] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-04-21T20:15:24.302200 #10332]  INFO -- : Found matching response for GET /animals
-D, [2021-04-21T20:15:24.302200 #10332] DEBUG -- : {
+I, [2021-04-28T20:40:46.473284 #14040]  INFO -- : Found matching response for GET /animals
+D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -77,33 +65,21 @@ D, [2021-04-21T20:15:24.302200 #10332] DEBUG -- : {
         "contents": "Bendali"
       },
       "gender": {
-        "json_class": "Pact::Term",
-        "data": {
-          "generate": "Female",
-          "matcher": {
-            "json_class": "Regexp",
-            "o": 0,
-            "s": "Female|Male"
-          }
-        }
+        "json_class": "Pact::SomethingLike",
+        "contents": "Female"
       },
-      "isVaccinated": {
+      "vaccinated": {
         "json_class": "Pact::SomethingLike",
         "contents": true
       },
       "name": {
         "json_class": "Pact::SomethingLike",
         "contents": "Manchas"
-      },
-      "vaccines": {
-        "json_class": "Pact::ArrayLike",
-        "contents": "rabia",
-        "min": 1
       }
     },
     "min": 1
   }
 }
-I, [2021-04-21T20:15:24.330326 #10332]  INFO -- : Verifying - interactions matched
-I, [2021-04-21T20:15:24.347061 #10332]  INFO -- : Cleared interactions
-I, [2021-04-21T20:15:24.362996 #10332]  INFO -- : Writing pact for AnimalSehlterBack to D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
+I, [2021-04-28T20:40:46.502414 #14040]  INFO -- : Verifying - interactions matched
+I, [2021-04-28T20:40:46.517174 #14040]  INFO -- : Cleared interactions
+I, [2021-04-28T20:40:46.533816 #14040]  INFO -- : Writing pact for AnimalSehlterBack to D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json

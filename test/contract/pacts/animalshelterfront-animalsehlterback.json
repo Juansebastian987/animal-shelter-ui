@@ -8,7 +8,7 @@
   "interactions": [
     {
       "description": "a request to get all animals",
-      "providerState": "there are animals",
+      "providerState": "has animals",
       "request": {
         "method": "GET",
         "path": "/animals"
@@ -21,11 +21,8 @@
           {
             "breed": "Bendali",
             "gender": "Female",
-            "isVaccinated": true,
-            "name": "Manchas",
-            "vaccines": [
-              "rabia"
-            ]
+            "vaccinated": true,
+            "name": "Manchas"
           }
         ],
         "matchingRules": {
@@ -39,19 +36,12 @@
             "match": "type"
           },
           "$.body[*].gender": {
-            "match": "regex",
-            "regex": "Female|Male"
+            "match": "type"
           },
-          "$.body[*].isVaccinated": {
+          "$.body[*].vaccinated": {
             "match": "type"
           },
           "$.body[*].name": {
-            "match": "type"
-          },
-          "$.body[*].vaccines": {
-            "min": 1
-          },
-          "$.body[*].vaccines[*].*": {
             "match": "type"
           }
         }

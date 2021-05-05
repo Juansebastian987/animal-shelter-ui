@@ -3,12 +3,16 @@ import { AnimalController } from "../../../controllers";
 import {Matchers} from "@pact-foundation/pact";
 
 describe('Given An Animal Service', () =>{ 
+    beforeAll(async ()=>{
+        await provider.setup();
+    });
+
    describe('When a request to list all the animals is made', () =>{
         beforeAll(async ()=>{
-            await provider.setup();
             await provider.addInteraction({
                 state: 'there are animals',
                 uponReceiving: 'a request to get all animals',
+                state:"has animals",
                 withRequest: {
                     method: 'GET',
                     path: '/animals',			
@@ -17,10 +21,9 @@ describe('Given An Animal Service', () =>{
                     status:200,
                     body: Matchers.eachLike({
                         breed: Matchers.like("Bendali"),
-                        gender: Matchers.term({generate: "Female", matcher: "Female|Male"}),
-                        isVaccinated: Matchers.boolean(true),
-                        name: Matchers.string("Manchas"),
-                        vaccines: Matchers.eachLike("rabia", {min:1})
+                        gender: Matchers.like("Female"),
+                        vaccinated: Matchers.boolean(true),
+                        name: Matchers.string("Manchas")
                     }, {min: 1})
                 }
             });
@@ -32,8 +35,8 @@ describe('Given An Animal Service', () =>{
             await provider.verify();
             
         });
-        afterAll(async ()=>{
-            await provider.finalize();
-        });
+    });
+    afterAll(async ()=>{
+        await provider.finalize();
     });
 });
