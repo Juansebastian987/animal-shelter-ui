@@ -1,5 +1,5 @@
-I, [2021-04-28T20:40:46.439760 #14040]  INFO -- : Registered expected interaction GET /animals
-D, [2021-04-28T20:40:46.440760 #14040] DEBUG -- : {
+I, [2021-05-06T13:02:38.995001 #8688]  INFO -- : Registered expected interaction GET /animals
+D, [2021-05-06T13:02:38.995001 #8688] DEBUG -- : {
   "description": "a request to get all animals",
   "providerState": "has animals",
   "request": {
@@ -35,8 +35,8 @@ D, [2021-04-28T20:40:46.440760 #14040] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-04-28T20:40:46.472286 #14040]  INFO -- : Received request GET /animals
-D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
+I, [2021-05-06T13:02:39.023481 #8688]  INFO -- : Received request GET /animals
+D, [2021-05-06T13:02:39.023481 #8688] DEBUG -- : {
   "path": "/animals",
   "query": "",
   "method": "get",
@@ -52,8 +52,8 @@ D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-04-28T20:40:46.473284 #14040]  INFO -- : Found matching response for GET /animals
-D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
+I, [2021-05-06T13:02:39.024473 #8688]  INFO -- : Found matching response for GET /animals
+D, [2021-05-06T13:02:39.024473 #8688] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -80,6 +80,6 @@ D, [2021-04-28T20:40:46.473284 #14040] DEBUG -- : {
     "min": 1
   }
 }
-I, [2021-04-28T20:40:46.502414 #14040]  INFO -- : Verifying - interactions matched
-I, [2021-04-28T20:40:46.517174 #14040]  INFO -- : Cleared interactions
-I, [2021-04-28T20:40:46.533816 #14040]  INFO -- : Writing pact for AnimalSehlterBack to D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
+I, [2021-05-06T13:02:39.037308 #8688]  INFO -- : Verifying - interactions matched
+I, [2021-05-06T13:02:39.052634 #8688]  INFO -- : Cleared interactions
+I, [2021-05-06T13:02:39.068595 #8688]  INFO -- : Writing pact for AnimalSehlterBack to D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json

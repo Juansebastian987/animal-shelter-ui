@@ -33,7 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-npm run test:component
+npm run test:publish
 git checkout -b test/contract
 git commit -m "test: move component test into a different folder"
 
