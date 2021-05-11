@@ -1,13 +1,13 @@
-I, [2021-05-11T14:59:13.779950 #9708]  INFO -- : Registered expected interaction GET /animals
-D, [2021-05-11T14:59:13.780934 #9708] DEBUG -- : {
-  "description": "a request to get all animals",
-  "providerState": "has animals",
+I, [2021-05-11T15:52:19.806983 #1624]  INFO -- : Registered expected interaction POST /animals
+D, [2021-05-11T15:52:19.808046 #1624] DEBUG -- : {
+  "description": "a request to get the animal created",
+  "providerState": "create an animal",
   "request": {
-    "method": "GET",
+    "method": "POST",
     "path": "/animals"
   },
   "response": {
-    "status": 200,
+    "status": 201,
     "headers": {
     },
     "body": {
@@ -27,7 +27,7 @@ D, [2021-05-11T14:59:13.780934 #9708] DEBUG -- : {
         },
         "name": {
           "json_class": "Pact::SomethingLike",
-          "contents": "Manchas"
+          "contents": "Other Animal"
         }
       },
       "min": 1
@@ -35,11 +35,11 @@ D, [2021-05-11T14:59:13.780934 #9708] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-05-11T14:59:13.814892 #9708]  INFO -- : Received request GET /animals
-D, [2021-05-11T14:59:13.814892 #9708] DEBUG -- : {
+I, [2021-05-11T15:52:19.831667 #1624]  INFO -- : Received request POST /animals
+D, [2021-05-11T15:52:19.832186 #1624] DEBUG -- : {
   "path": "/animals",
   "query": "",
-  "method": "get",
+  "method": "post",
   "headers": {
     "Accept": "application/json, text/plain, */*",
     "Referer": "http://localhost/",
@@ -52,9 +52,9 @@ D, [2021-05-11T14:59:13.814892 #9708] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-05-11T14:59:13.816893 #9708]  INFO -- : Found matching response for GET /animals
-D, [2021-05-11T14:59:13.816893 #9708] DEBUG -- : {
-  "status": 200,
+I, [2021-05-11T15:52:19.833199 #1624]  INFO -- : Found matching response for POST /animals
+D, [2021-05-11T15:52:19.833199 #1624] DEBUG -- : {
+  "status": 201,
   "headers": {
   },
   "body": {
@@ -74,12 +74,12 @@ D, [2021-05-11T14:59:13.816893 #9708] DEBUG -- : {
       },
       "name": {
         "json_class": "Pact::SomethingLike",
-        "contents": "Manchas"
+        "contents": "Other Animal"
       }
     },
     "min": 1
   }
 }
-I, [2021-05-11T14:59:13.844033 #9708]  INFO -- : Verifying - interactions matched
-I, [2021-05-11T14:59:13.859327 #9708]  INFO -- : Cleared interactions
-I, [2021-05-11T14:59:13.876331 #9708]  INFO -- : Merging interactions into pact for AnimalSehlterBack at D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
+I, [2021-05-11T15:52:19.846237 #1624]  INFO -- : Verifying - interactions matched
+I, [2021-05-11T15:52:19.862498 #1624]  INFO -- : Cleared interactions
+I, [2021-05-11T15:52:19.877641 #1624]  INFO -- : Merging interactions into pact for AnimalSehlterBack at D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
