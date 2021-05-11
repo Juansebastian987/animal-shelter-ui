@@ -7,28 +7,22 @@ describe('Given An Animal Service', () =>{
         await provider.setup();
     });
 
-   describe('When a request to list all the animals is made', () =>{
+   describe('When a request the animals create', () =>{
         beforeAll(async ()=>{
             await provider.addInteraction({
-                uponReceiving: 'a request to get all animals',
-                state:"has animals",
+                uponReceiving: 'a request to delete the animal created',
+                state:"delete an animal",
                 withRequest: {
-                    method: 'GET',
-                    path: '/animals',			
+                    method: 'DELETE',
+                    path: '/animals/OtherAnimal',			
                 },
                 willRespondWith: {
-                    status:200,
-                    body: Matchers.eachLike({
-                        breed: Matchers.like("Bendali"),
-                        gender: Matchers.like("Female"),
-                        vaccinated: Matchers.boolean(true),
-                        name: Matchers.string("Manchas")
-                    }, {min: 1})
+                    status:204
                 }
             });
        });
         it("Then it should return the right data", async() => {
-            const response = await AnimalController.list();
+            const response = await AnimalController.delete("OtherAnimal");
             expect(response.data).toMatchSnapshot();
             
             await provider.verify();

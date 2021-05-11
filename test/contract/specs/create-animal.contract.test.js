@@ -10,9 +10,8 @@ describe('Given An Animal Service', () =>{
    describe('When a request the animals create', () =>{
         beforeAll(async ()=>{
             await provider.addInteraction({
-                state: 'there an animal',
                 uponReceiving: 'a request to get the animal created',
-                state:"has an animal",
+                state:"create an animal",
                 withRequest: {
                     method: 'POST',
                     path: '/animals',			
@@ -29,7 +28,7 @@ describe('Given An Animal Service', () =>{
             });
        });
         it("Then it should return the right data", async() => {
-            const response = await AnimalController.list();
+            const response = await AnimalController.register();
             expect(response.data).toMatchSnapshot();
             
             await provider.verify();

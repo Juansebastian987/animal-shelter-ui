@@ -1,5 +1,5 @@
-I, [2021-05-06T13:02:38.995001 #8688]  INFO -- : Registered expected interaction GET /animals
-D, [2021-05-06T13:02:38.995001 #8688] DEBUG -- : {
+I, [2021-05-11T14:59:13.779950 #9708]  INFO -- : Registered expected interaction GET /animals
+D, [2021-05-11T14:59:13.780934 #9708] DEBUG -- : {
   "description": "a request to get all animals",
   "providerState": "has animals",
   "request": {
@@ -35,8 +35,8 @@ D, [2021-05-06T13:02:38.995001 #8688] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-05-06T13:02:39.023481 #8688]  INFO -- : Received request GET /animals
-D, [2021-05-06T13:02:39.023481 #8688] DEBUG -- : {
+I, [2021-05-11T14:59:13.814892 #9708]  INFO -- : Received request GET /animals
+D, [2021-05-11T14:59:13.814892 #9708] DEBUG -- : {
   "path": "/animals",
   "query": "",
   "method": "get",
@@ -52,8 +52,8 @@ D, [2021-05-06T13:02:39.023481 #8688] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-05-06T13:02:39.024473 #8688]  INFO -- : Found matching response for GET /animals
-D, [2021-05-06T13:02:39.024473 #8688] DEBUG -- : {
+I, [2021-05-11T14:59:13.816893 #9708]  INFO -- : Found matching response for GET /animals
+D, [2021-05-11T14:59:13.816893 #9708] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -80,6 +80,6 @@ D, [2021-05-06T13:02:39.024473 #8688] DEBUG -- : {
     "min": 1
   }
 }
-I, [2021-05-06T13:02:39.037308 #8688]  INFO -- : Verifying - interactions matched
-I, [2021-05-06T13:02:39.052634 #8688]  INFO -- : Cleared interactions
-I, [2021-05-06T13:02:39.068595 #8688]  INFO -- : Writing pact for AnimalSehlterBack to D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
+I, [2021-05-11T14:59:13.844033 #9708]  INFO -- : Verifying - interactions matched
+I, [2021-05-11T14:59:13.859327 #9708]  INFO -- : Cleared interactions
+I, [2021-05-11T14:59:13.876331 #9708]  INFO -- : Merging interactions into pact for AnimalSehlterBack at D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
