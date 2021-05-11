@@ -1,11 +1,7 @@
 import '@testing-library/jest-dom/extend-expect'
 import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
-<<<<<<< HEAD:test/component/register-animal.test.js
-import RegisterCat from '../../pages/animal/register'
-=======
 import RegisterCat from '../../../pages/animal/register'
->>>>>>> 9a6f1943ea877a7e736eb0b37969f1e11ca902f0:test/component/specs/register-animal.test.js
 
 test('The register component shows the title, the cat input field, the breed dropdown, the genders radio butons, the vaccines checkboxes, the accept terms and conditions checkbox and the register button', () => {
   render(<RegisterCat />);
