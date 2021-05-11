@@ -25,11 +25,7 @@
     "swr": "^0.4.2"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@pact-foundation/pact": "^9.15.5",
-=======
-    "@pact-foundation/pact": "^9.15.4",
->>>>>>> 9a6f1943ea877a7e736eb0b37969f1e11ca902f0
     "@testing-library/dom": "^7.30.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
