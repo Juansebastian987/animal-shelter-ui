@@ -2,6 +2,13 @@ import { provider } from "./init-pact";
 import { AnimalController } from "../../../controllers";
 import {Matchers} from "@pact-foundation/pact";
 
+var pet = {
+    breed: "Bendali",
+    gender: "Female",
+    vaccinated:true,
+    name: "Other Animal"
+}
+
 describe('Given An Animal Service', () =>{ 
     beforeAll(async ()=>{
         await provider.setup();
@@ -14,25 +21,19 @@ describe('Given An Animal Service', () =>{
                 state:"create an animal",
                 withRequest: {
                     method: 'POST',
-                    path: '/animals',			
+                    path: '/animals',	
+                    body: pet		
                 },
                 willRespondWith: {
                     status:201,
-                    body: Matchers.eachLike({
-                        breed: Matchers.like("Bendali"),
-                        gender: Matchers.like("Female"),
-                        vaccinated: Matchers.boolean(true),
-                        name: Matchers.string("Other Animal")
-                    }, {min: 1})
+                    body: Matchers.like(pet)
                 }
             });
        });
         it("Then it should return the right data", async() => {
-            const response = await AnimalController.register();
-            expect(response.data).toMatchSnapshot();
-            
+            const response = await AnimalController.register(pet);
+            expect(response.data).toMatchSnapshot();        
             await provider.verify();
-            
         });
     });
     afterAll(async ()=>{
