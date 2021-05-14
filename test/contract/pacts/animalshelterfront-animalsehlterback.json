@@ -7,54 +7,30 @@
   },
   "interactions": [
     {
-      "description": "a request to delete the animal created",
-      "providerState": "delete an animal",
-      "request": {
-        "method": "DELETE",
-        "path": "/animals/OtherAnimal"
-      },
-      "response": {
-        "status": 204,
-        "headers": {
-        }
-      }
-    },
-    {
       "description": "a request to get the animal created",
       "providerState": "create an animal",
       "request": {
         "method": "POST",
-        "path": "/animals"
+        "path": "/animals",
+        "body": {
+          "breed": "Bendali",
+          "gender": "Female",
+          "vaccinated": true,
+          "name": "Other Animal"
+        }
       },
       "response": {
         "status": 201,
         "headers": {
         },
-        "body": [
-          {
-            "breed": "Bendali",
-            "gender": "Female",
-            "vaccinated": true,
-            "name": "Other Animal"
-          }
-        ],
+        "body": {
+          "breed": "Bendali",
+          "gender": "Female",
+          "vaccinated": true,
+          "name": "Other Animal"
+        },
         "matchingRules": {
           "$.body": {
-            "min": 1
-          },
-          "$.body[*].*": {
-            "match": "type"
-          },
-          "$.body[*].breed": {
-            "match": "type"
-          },
-          "$.body[*].gender": {
-            "match": "type"
-          },
-          "$.body[*].vaccinated": {
-            "match": "type"
-          },
-          "$.body[*].name": {
             "match": "type"
           }
         }
@@ -98,6 +74,19 @@
           "$.body[*].name": {
             "match": "type"
           }
+        }
+      }
+    },
+    {
+      "description": "a request to delete the animal created",
+      "providerState": "delete an animal",
+      "request": {
+        "method": "DELETE",
+        "path": "/animals/OtherAnimal"
+      },
+      "response": {
+        "status": 204,
+        "headers": {
         }
       }
     }

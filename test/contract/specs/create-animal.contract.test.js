@@ -22,11 +22,11 @@ describe('Given An Animal Service', () =>{
                 withRequest: {
                     method: 'POST',
                     path: '/animals',	
-                    body: pet		
+                    body: pet,		
                 },
                 willRespondWith: {
                     status:201,
-                    body: Matchers.like(pet)
+                    body: Matchers.like(pet),
                 }
             });
        });

@@ -1,45 +1,24 @@
-I, [2021-05-13T17:45:02.550931 #1268]  INFO -- : Registered expected interaction GET /animals
-D, [2021-05-13T17:45:02.550931 #1268] DEBUG -- : {
-  "description": "a request to get all animals",
-  "providerState": "has animals",
+I, [2021-05-13T19:05:40.800188 #9120]  INFO -- : Registered expected interaction DELETE /animals/OtherAnimal
+D, [2021-05-13T19:05:40.801132 #9120] DEBUG -- : {
+  "description": "a request to delete the animal created",
+  "providerState": "delete an animal",
   "request": {
-    "method": "GET",
-    "path": "/animals"
+    "method": "DELETE",
+    "path": "/animals/OtherAnimal"
   },
   "response": {
-    "status": 200,
+    "status": 204,
     "headers": {
-    },
-    "body": {
-      "json_class": "Pact::ArrayLike",
-      "contents": {
-        "breed": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Bendali"
-        },
-        "gender": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Female"
-        },
-        "vaccinated": {
-          "json_class": "Pact::SomethingLike",
-          "contents": true
-        },
-        "name": {
-          "json_class": "Pact::SomethingLike",
-          "contents": "Manchas"
-        }
-      },
-      "min": 1
     }
   },
   "metadata": null
 }
-I, [2021-05-13T17:45:02.565946 #1268]  INFO -- : Received request GET /animals
-D, [2021-05-13T17:45:02.565946 #1268] DEBUG -- : {
-  "path": "/animals",
+I, [2021-05-13T19:05:40.828680 #9120]  INFO -- : Received OPTIONS request for mock service administration endpoint DELETE /animals/OtherAnimal. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"*", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2021-05-13T19:05:40.843944 #9120]  INFO -- : Received request DELETE /animals/OtherAnimal
+D, [2021-05-13T19:05:40.843944 #9120] DEBUG -- : {
+  "path": "/animals/OtherAnimal",
   "query": "",
-  "method": "get",
+  "method": "delete",
   "headers": {
     "Accept": "application/json, text/plain, */*",
     "Referer": "http://localhost/",
@@ -52,34 +31,12 @@ D, [2021-05-13T17:45:02.565946 #1268] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-05-13T17:45:02.566888 #1268]  INFO -- : Found matching response for GET /animals
-D, [2021-05-13T17:45:02.566888 #1268] DEBUG -- : {
-  "status": 200,
+I, [2021-05-13T19:05:40.844949 #9120]  INFO -- : Found matching response for DELETE /animals/OtherAnimal
+D, [2021-05-13T19:05:40.844949 #9120] DEBUG -- : {
+  "status": 204,
   "headers": {
-  },
-  "body": {
-    "json_class": "Pact::ArrayLike",
-    "contents": {
-      "breed": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Bendali"
-      },
-      "gender": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Female"
-      },
-      "vaccinated": {
-        "json_class": "Pact::SomethingLike",
-        "contents": true
-      },
-      "name": {
-        "json_class": "Pact::SomethingLike",
-        "contents": "Manchas"
-      }
-    },
-    "min": 1
   }
 }
-I, [2021-05-13T17:45:02.581145 #1268]  INFO -- : Verifying - interactions matched
-I, [2021-05-13T17:45:02.597094 #1268]  INFO -- : Cleared interactions
-I, [2021-05-13T17:45:02.612789 #1268]  INFO -- : Merging interactions into pact for AnimalSehlterBack at D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
+I, [2021-05-13T19:05:40.859229 #9120]  INFO -- : Verifying - interactions matched
+I, [2021-05-13T19:05:40.875792 #9120]  INFO -- : Cleared interactions
+I, [2021-05-13T19:05:40.892799 #9120]  INFO -- : Merging interactions into pact for AnimalSehlterBack at D:/Descargas/GitHub/animal-shelter-ui/test/contract/pacts/animalshelterfront-animalsehlterback.json
